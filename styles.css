@@ -1,0 +1,659 @@
+/* ============================================
+   FOOD TRUCK — CSS Personalizado
+   Módulo M09 - Diseño de Interfaces
+   Framework: Bootstrap 5.3
+   ============================================ */
+
+/* === 1. VARIABLES CSS Y ESTILOS GENERALES === */
+:root {
+    --ft-primary: #e85d04;
+    --ft-secondary: #dc2f02;
+    --ft-dark: #370617;
+    --ft-dark-alt: #6a040f;
+    --ft-light: #fef3e2;
+    --ft-accent: #f48c06;
+    --navbar-height: 62px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: var(--navbar-height);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* === 2. NAVBAR FIXED-TOP (Rúbrica 3.5 pts) === */
+.navbar {
+    background: linear-gradient(135deg, var(--ft-dark) 0%, var(--ft-dark-alt) 100%) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    color: var(--ft-accent) !important;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+}
+
+.navbar-brand i {
+    margin-right: 5px;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.6rem 0.9rem !important;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--ft-accent) !important;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar .nav-link.active {
+    color: var(--ft-accent) !important;
+    font-weight: 700;
+}
+
+.navbar .dropdown-menu {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+}
+
+.navbar .dropdown-item {
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--ft-light);
+    color: var(--ft-primary);
+}
+
+.navbar .dropdown-item i {
+    width: 22px;
+    text-align: center;
+    margin-right: 6px;
+    color: var(--ft-primary);
+}
+
+.navbar-text {
+    color: var(--ft-accent) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* === 3. BOTONES LOGIN / LOGOUT === */
+#loginBtn {
+    border-color: var(--ft-accent);
+    color: var(--ft-accent);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#loginBtn:hover {
+    background-color: var(--ft-accent);
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(244, 140, 6, 0.4);
+}
+
+#logoutBtn {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #c0392b;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.4);
+}
+
+/* === 4. MODAL LOGIN — Posicionado a la derecha, bajo la Navbar (Rúbrica 2 pts) === */
+#loginModal .modal-dialog {
+    position: fixed;
+    top: var(--navbar-height);
+    right: 0;
+    margin: 0;
+    max-width: 400px;
+    width: 100%;
+}
+
+#loginModal .modal-content {
+    border-radius: 0 0 0 16px;
+    border: none;
+    box-shadow: -6px 6px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+#loginModal .modal-header {
+    background: linear-gradient(135deg, var(--ft-primary), var(--ft-secondary));
+    color: white;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+}
+
+#loginModal .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+#loginModal .modal-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+#loginModal .modal-body {
+    padding: 1.5rem;
+}
+
+#loginModal .form-control:focus {
+    border-color: var(--ft-accent);
+    box-shadow: 0 0 0 0.2rem rgba(244, 140, 6, 0.25);
+}
+
+/* === 5. CARRUSEL (Rúbrica 3.5 pts) === */
+.carousel {
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-img {
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: filter 0.6s ease;
+}
+
+.carousel-item:hover .carousel-img {
+    filter: brightness(0.95);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.carousel-caption h5 {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: var(--ft-accent);
+    transform: scale(1.2);
+}
+
+/* === 6. BREADCRUMB (Rúbrica 3.5 pts) === */
+.breadcrumb-section {
+    background-color: var(--ft-light);
+    border-bottom: 3px solid var(--ft-accent);
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+.breadcrumb-item a {
+    color: var(--ft-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--ft-secondary);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--ft-dark);
+    font-weight: 600;
+}
+
+/* === 7. CARDS DE PRODUCTO (Rúbrica 3.5 pts) === */
+.product-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.product-card .card-img-top {
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+.product-card .overflow-hidden {
+    overflow: hidden;
+}
+
+.product-card .card-body {
+    padding: 1.3rem;
+}
+
+.product-card .card-title {
+    font-weight: 700;
+    color: var(--ft-dark);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.product-card .card-footer {
+    background: transparent;
+    border-top: 1px solid #f0f0f0;
+    padding: 0.8rem 1.3rem;
+}
+
+.rating-icons i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.rating-icons i:hover {
+    transform: scale(1.4);
+}
+
+.card-price {
+    font-weight: 700;
+    color: var(--ft-primary);
+    font-size: 1.1rem;
+}
+
+/* === 8. PAGINACIÓN (Rúbrica 3.5 pts) === */
+.pagination .page-link {
+    color: var(--ft-primary);
+    border-color: #dee2e6;
+    font-weight: 600;
+    padding: 0.45rem 0.75rem;
+    transition: all 0.3s ease;
+    border-radius: 8px !important;
+    margin: 0 2px;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--ft-primary);
+    border-color: var(--ft-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(232, 93, 4, 0.3);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--ft-secondary);
+    border-color: var(--ft-secondary);
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(220, 47, 2, 0.4);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+/* === 9. ALERTA DE COOKIES (Rúbrica 1 pt) === */
+.cookie-alert {
+    background: linear-gradient(90deg, #fff3cd, #ffeaa7);
+    border: none;
+    border-top: 3px solid var(--ft-accent);
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 0.92rem;
+}
+
+.cookie-alert .alert-link {
+    color: var(--ft-dark);
+    font-weight: 700;
+}
+
+/* === 10. FOOTER (Rúbrica 1 pt) === */
+.site-footer {
+    background: linear-gradient(135deg, var(--ft-dark) 0%, var(--ft-dark-alt) 100%);
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--ft-accent);
+    transform: translateY(-4px);
+}
+
+.site-footer .social-icons i {
+    font-size: 1.6rem;
+}
+
+.site-footer .footer-link {
+    color: var(--ft-accent);
+    font-weight: 600;
+}
+
+.site-footer .footer-link:hover {
+    color: #fff;
+}
+
+/* === 11. PÁGINAS DE PRODUCTO — Detalle (Rúbrica 5 pts) === */
+.product-detail-section {
+    min-height: 55vh;
+}
+
+.product-detail-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-detail-img:hover {
+    transform: scale(1.02);
+}
+
+.product-detail-info {
+    padding: 1rem 2rem;
+}
+
+.product-detail-info h2 {
+    color: var(--ft-dark);
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.product-detail-info .lead {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.product-detail-info .price-tag {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--ft-primary);
+    background: var(--ft-light);
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 12px;
+    border: 2px solid var(--ft-accent);
+}
+
+.product-detail-info .ingredients-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-detail-info .ingredients-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.product-detail-info .ingredients-list li:last-child {
+    border-bottom: none;
+}
+
+.product-detail-info .ingredients-list li i {
+    color: var(--ft-accent);
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+
+/* === 12. PÁGINA QUIÉNES SOMOS === */
+.about-hero {
+    background: linear-gradient(135deg, var(--ft-dark), var(--ft-dark-alt));
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.about-hero p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+.about-section {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-section h3 {
+    color: var(--ft-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--ft-accent);
+    display: inline-block;
+}
+
+.contact-card {
+    background: var(--ft-light);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 5px solid var(--ft-primary);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateX(5px);
+}
+
+.contact-card i {
+    color: var(--ft-primary);
+    font-size: 1.3rem;
+    width: 30px;
+    text-align: center;
+}
+
+.value-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--ft-primary);
+    margin-bottom: 1rem;
+}
+
+.icon-primary {
+    color: var(--ft-primary);
+}
+
+.icon-secondary {
+    color: var(--ft-secondary);
+}
+
+.value-card h5 {
+    font-weight: 700;
+    color: var(--ft-dark);
+}
+
+/* === 13. SECCIÓN TÍTULO PRODUCTOS (Index) === */
+.section-title {
+    font-weight: 800;
+    color: var(--ft-dark);
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--ft-accent);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: #888;
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+/* === 14. RESPONSIVE === */
+@media (max-width: 991.98px) {
+    .navbar .nav-link {
+        padding: 0.5rem 0.7rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel-img {
+        height: 280px;
+    }
+
+    .product-detail-info {
+        padding: 1rem 0;
+    }
+
+    .product-detail-info h2 {
+        font-size: 1.7rem;
+    }
+
+    #loginModal .modal-dialog {
+        max-width: 100%;
+    }
+
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-img {
+        height: 220px;
+    }
+
+    .product-card .card-img-top {
+        height: 160px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.85rem;
+    }
+}
+
+/* === 15. ANIMACIONES === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* === 16. TOOLTIP PERSONALIZADO === */
+.tooltip-inner {
+    background-color: var(--ft-dark);
+    font-size: 0.82rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.tooltip .tooltip-arrow::before {
+    border-top-color: var(--ft-dark);
+}

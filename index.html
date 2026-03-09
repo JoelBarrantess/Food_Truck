@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck — Inicio</title>
+    <!-- Bootstrap 5.3 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6+ (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============================================
+         SECCIÓN 1: HEADER & NAVBAR FIXED-TOP
+         Rúbrica: 3.5 puntos
+         Logo, nombre, menú dropdowns (4 categorías x 3 productos),
+         área texto bienvenida, botones Login/Logout
+         ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
+        <div class="container-fluid">
+            <!-- Logo y nombre del sitio -->
+            <a class="navbar-brand" href="index.html"
+               data-bs-toggle="tooltip" data-bs-title="Volver a la página principal">
+                <i class="fa-solid fa-truck-fast"></i> Food Truck
+            </a>
+            <!-- Toggler para móvil -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Abrir menú" title="Abrir o cerrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <!-- Dropdown: FRÍOS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           data-bs-toggle="dropdown" aria-expanded="false"
+                           title="Ver platos fríos" tabindex="0">
+                            <i class="fa-solid fa-snowflake"></i> Fríos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fred1.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Bocadillo con jamón ibérico de bellota">
+                                <i class="fa-solid fa-bread-slice"></i> Bocadillo de ibérico</a></li>
+                            <li><a class="dropdown-item" href="fred2.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Bocadillo con quesos curados selectos">
+                                <i class="fa-solid fa-cheese"></i> Bocadillo de queso</a></li>
+                            <li><a class="dropdown-item" href="fred3.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Ensalada fresca con productos mediterráneos">
+                                <i class="fa-solid fa-leaf"></i> Ensalada mediterránea</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown: CALIENTES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           data-bs-toggle="dropdown" aria-expanded="false"
+                           title="Ver platos calientes" tabindex="0">
+                            <i class="fa-solid fa-fire"></i> Calientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="calent1.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Hamburguesa de ternera premium">
+                                <i class="fa-solid fa-burger"></i> Burger clásica</a></li>
+                            <li><a class="dropdown-item" href="calent2.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Frankfurt con salchicha artesana">
+                                <i class="fa-solid fa-hotdog"></i> Frankfurt gourmet</a></li>
+                            <li><a class="dropdown-item" href="calent3.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Pizza de horno de leña portátil">
+                                <i class="fa-solid fa-pizza-slice"></i> Pizza artesana</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown: DULCES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           data-bs-toggle="dropdown" aria-expanded="false"
+                           title="Ver nuestros postres dulces" tabindex="0">
+                            <i class="fa-solid fa-ice-cream"></i> Dulces
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dolc1.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Helado cubierto de chocolate belga">
+                                <i class="fa-solid fa-ice-cream"></i> Helado Magnum</a></li>
+                            <li><a class="dropdown-item" href="dolc2.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Crêpe artesanal con chocolate fundido">
+                                <i class="fa-solid fa-stroopwafel"></i> Crêpe de chocolate</a></li>
+                            <li><a class="dropdown-item" href="dolc3.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Tarta casera de queso con frutos">
+                                <i class="fa-solid fa-cake-candles"></i> Tarta de queso</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown: BEBIDAS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           data-bs-toggle="dropdown" aria-expanded="false"
+                           title="Ver bebidas disponibles" tabindex="0">
+                            <i class="fa-solid fa-mug-hot"></i> Bebidas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="beguda1.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Refresco Coca-Cola servido con hielo">
+                                <i class="fa-solid fa-glass-water"></i> Coca-Cola</a></li>
+                            <li><a class="dropdown-item" href="beguda2.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Cerveza IPA artesana local">
+                                <i class="fa-solid fa-beer-mug-empty"></i> Cerveza artesana</a></li>
+                            <li><a class="dropdown-item" href="beguda3.html"
+                                   data-bs-toggle="tooltip" data-bs-title="Zumo de naranja exprimido al momento">
+                                <i class="fa-solid fa-lemon"></i> Zumo de naranja</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Quiénes somos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="quisom.html"
+                           data-bs-toggle="tooltip" data-bs-title="Conoce nuestro equipo e historia">
+                            <i class="fa-solid fa-users"></i> Quiénes somos
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Área de texto bienvenida (vacía por defecto) -->
+                <span class="navbar-text me-3" id="welcomeText"></span>
+                <!-- Botón Login (azul) -->
+                <button class="btn btn-sm me-2" id="loginBtn"
+                        data-bs-toggle="tooltip" data-bs-title="Iniciar sesión de usuario">
+                    <i class="fa-solid fa-right-to-bracket"></i> Login
+                </button>
+                <!-- Botón Logout (rojo, oculto por defecto) -->
+                <button class="btn btn-sm d-none" id="logoutBtn"
+                        data-bs-toggle="tooltip" data-bs-title="Cerrar la sesión actual">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         SECCIÓN 2: MODAL DE LOGIN
+         Rúbrica: 2 puntos
+         modal-dialog-scrollable, posicionado a la derecha bajo la navbar
+         Formulario con username y password
+         JS: Enviar → "Bienvenido [nombre]" / Cancelar → cierra
+         ============================================ -->
+    <div class="modal fade" id="loginModal" tabindex="-1"
+         aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                        <i class="fa-solid fa-user-lock"></i> Iniciar Sesión
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Cerrar"
+                            data-bs-toggle="tooltip" data-bs-title="Cerrar el formulario"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">
+                                <i class="fa-solid fa-user"></i> Nombre de usuario
+                            </label>
+                            <input type="text" class="form-control" id="username"
+                                   placeholder="Introduce tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">
+                                <i class="fa-solid fa-lock"></i> Contraseña
+                            </label>
+                            <input type="password" class="form-control" id="password"
+                                   placeholder="Introduce la contraseña" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary"
+                                    data-bs-toggle="tooltip" data-bs-title="Enviar las credenciales">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    data-bs-toggle="tooltip" data-bs-title="Cerrar sin iniciar sesión">
+                                <i class="fa-solid fa-xmark"></i> Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- ============================================
+             SECCIÓN 3: CARRUSEL
+             Rúbrica: 3.5 puntos — Slider funcional con 4 imágenes
+             Indicadores + controles + captions
+             ============================================ -->
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"
+                        aria-label="Diapositiva 2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"
+                        aria-label="Diapositiva 3"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"
+                        aria-label="Diapositiva 4"></button>
+            </div>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1200&q=80"
+                         class="d-block w-100 carousel-img" alt="Food Truck en la calle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><i class="fa-solid fa-truck-fast"></i> ¡Bienvenidos a Food Truck!</h5>
+                        <p>La mejor comida callejera directa a tu mano</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80"
+                         class="d-block w-100 carousel-img" alt="Comida a la brasa">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><i class="fa-solid fa-fire"></i> Cocina a la brasa</h5>
+                        <p>Ingredientes frescos cocinados con pasión</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80"
+                         class="d-block w-100 carousel-img" alt="Hamburguesa gourmet">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><i class="fa-solid fa-burger"></i> Burgers Premium</h5>
+                        <p>Carne de ternera madurada con queso artesano</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+                         class="d-block w-100 carousel-img" alt="Variedad de comida">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><i class="fa-solid fa-utensils"></i> Para todos los gustos</h5>
+                        <p>Fríos, calientes, dulces y bebidas artesanas</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#mainCarousel" data-bs-slide="prev"
+                    data-bs-toggle="tooltip" data-bs-title="Imagen anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#mainCarousel" data-bs-slide="next"
+                    data-bs-toggle="tooltip" data-bs-title="Imagen siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <!-- ============================================
+             SECCIÓN 4: BREADCRUMB
+             Rúbrica: 3.5 puntos — Migas de pan: Inicio
+             ============================================ -->
+        <div class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <i class="fa-solid fa-house"></i> Inicio
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECCIÓN 5: CARDS PROMOCIONALES
+             Rúbrica: 3.5 puntos — 4 Cards con imagen, título,
+             descripción, e iconos FontAwesome de valoración
+             ============================================ -->
+        <section class="container my-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title d-inline-block">Nuestros destacados</h2>
+                <p class="section-subtitle">Una selección de los platos más populares de nuestro food truck</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <!-- Card 1: Bocadillo de ibérico -->
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+                                 class="card-img-top" alt="Bocadillo de ibérico">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fa-solid fa-bread-slice text-warning"></i> Bocadillo de ibérico
+                            </h5>
+                            <p class="card-text">Delicioso bocadillo artesanal con jamón ibérico de bellota, tomate y aceite de oliva virgen extra.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="card-price"><i class="fa-solid fa-euro-sign"></i> 8,50</span>
+                            <span class="rating-icons">
+                                <i class="fa-solid fa-thumbs-up text-success"
+                                   data-bs-toggle="tooltip" data-bs-title="¡Me gusta!" title="Me gusta"></i>
+                                <i class="fa-solid fa-thumbs-down text-danger ms-2"
+                                   data-bs-toggle="tooltip" data-bs-title="No me gusta" title="No me gusta"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Burger clásica -->
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                                 class="card-img-top" alt="Burger clásica">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fa-solid fa-burger text-danger"></i> Burger clásica
+                            </h5>
+                            <p class="card-text">Hamburguesa suculenta con carne de ternera madurada, queso cheddar y salsa especial.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="card-price"><i class="fa-solid fa-euro-sign"></i> 9,50</span>
+                            <span class="rating-icons">
+                                <i class="fa-solid fa-thumbs-up text-success"
+                                   data-bs-toggle="tooltip" data-bs-title="¡Me gusta!" title="Me gusta"></i>
+                                <i class="fa-solid fa-thumbs-down text-danger ms-2"
+                                   data-bs-toggle="tooltip" data-bs-title="No me gusta" title="No me gusta"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Helado Magnum -->
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80"
+                                 class="card-img-top" alt="Helado Magnum">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fa-solid fa-ice-cream text-info"></i> Helado Magnum
+                            </h5>
+                            <p class="card-text">Helado cremoso de vainilla cubierto con chocolate belga y almendras tostadas.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="card-price"><i class="fa-solid fa-euro-sign"></i> 4,50</span>
+                            <span class="rating-icons">
+                                <i class="fa-solid fa-thumbs-up text-success"
+                                   data-bs-toggle="tooltip" data-bs-title="¡Me gusta!" title="Me gusta"></i>
+                                <i class="fa-solid fa-thumbs-down text-danger ms-2"
+                                   data-bs-toggle="tooltip" data-bs-title="No me gusta" title="No me gusta"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Coca-Cola -->
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=600&q=80"
+                                 class="card-img-top" alt="Coca-Cola">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fa-solid fa-glass-water text-primary"></i> Coca-Cola
+                            </h5>
+                            <p class="card-text">Refresco clásico servido bien frío con hielo y una rodaja de limón fresco.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="card-price"><i class="fa-solid fa-euro-sign"></i> 2,50</span>
+                            <span class="rating-icons">
+                                <i class="fa-solid fa-thumbs-up text-success"
+                                   data-bs-toggle="tooltip" data-bs-title="¡Me gusta!" title="Me gusta"></i>
+                                <i class="fa-solid fa-thumbs-down text-danger ms-2"
+                                   data-bs-toggle="tooltip" data-bs-title="No me gusta" title="No me gusta"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECCIÓN 6: PAGINACIÓN
+             Rúbrica: 3.5 puntos — Navegación entre index y subpáginas
+             ============================================ -->
+        <nav aria-label="Navegación de productos" class="d-flex justify-content-center my-4">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item disabled">
+                    <span class="page-link" data-bs-toggle="tooltip" data-bs-title="Ya estás en el inicio">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="fred1.html" data-bs-toggle="tooltip" data-bs-title="Bocadillo de ibérico">1</a></li>
+                <li class="page-item"><a class="page-link" href="fred2.html" data-bs-toggle="tooltip" data-bs-title="Bocadillo de queso">2</a></li>
+                <li class="page-item"><a class="page-link" href="fred3.html" data-bs-toggle="tooltip" data-bs-title="Ensalada mediterránea">3</a></li>
+                <li class="page-item"><a class="page-link" href="calent1.html" data-bs-toggle="tooltip" data-bs-title="Burger clásica">4</a></li>
+                <li class="page-item"><a class="page-link" href="calent2.html" data-bs-toggle="tooltip" data-bs-title="Frankfurt gourmet">5</a></li>
+                <li class="page-item"><a class="page-link" href="calent3.html" data-bs-toggle="tooltip" data-bs-title="Pizza artesana">6</a></li>
+                <li class="page-item"><a class="page-link" href="dolc1.html" data-bs-toggle="tooltip" data-bs-title="Helado Magnum">7</a></li>
+                <li class="page-item"><a class="page-link" href="dolc2.html" data-bs-toggle="tooltip" data-bs-title="Crêpe de chocolate">8</a></li>
+                <li class="page-item"><a class="page-link" href="dolc3.html" data-bs-toggle="tooltip" data-bs-title="Tarta de queso">9</a></li>
+                <li class="page-item"><a class="page-link" href="beguda1.html" data-bs-toggle="tooltip" data-bs-title="Coca-Cola">10</a></li>
+                <li class="page-item"><a class="page-link" href="beguda2.html" data-bs-toggle="tooltip" data-bs-title="Cerveza artesana">11</a></li>
+                <li class="page-item"><a class="page-link" href="beguda3.html" data-bs-toggle="tooltip" data-bs-title="Zumo de naranja">12</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="fred1.html" data-bs-toggle="tooltip" data-bs-title="Ir al primer producto" title="Ir al primer producto">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </main>
+
+    <!-- ============================================
+         SECCIÓN 7: ALERTA DE COOKIES
+         Rúbrica: 1 punto — Alert dismissible sobre el footer
+         ============================================ -->
+    <div class="alert cookie-alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="container">
+            <i class="fa-solid fa-cookie-bite me-2"></i>
+            <strong>Aviso legal de cookies:</strong>
+            Este sitio web utiliza cookies propias y de terceros para mejorar tu experiencia de navegación
+            y ofrecer contenidos personalizados. Al continuar navegando, aceptas su uso.
+            <a href="#" class="alert-link" data-bs-toggle="tooltip"
+               data-bs-title="Leer la política de cookies completa">Más información</a>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"
+                    data-bs-toggle="tooltip" data-bs-title="Cerrar el aviso de cookies"></button>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SECCIÓN 8: FOOTER
+         Rúbrica: 1 punto — Iconos redes sociales centrados + Quiénes somos
+         ============================================ -->
+    <footer class="site-footer text-center">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#" title="Instagram" class="me-3"
+                   data-bs-toggle="tooltip" data-bs-title="Síguenos en Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" title="Facebook" class="me-3"
+                   data-bs-toggle="tooltip" data-bs-title="Síguenos en Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" title="Twitter" class="me-3"
+                   data-bs-toggle="tooltip" data-bs-title="Síguenos en Twitter / X">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" title="TikTok" class="me-3"
+                   data-bs-toggle="tooltip" data-bs-title="Síguenos en TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" title="YouTube"
+                   data-bs-toggle="tooltip" data-bs-title="Suscríbete a nuestro canal de YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p class="mb-1">
+                <a href="quisom.html" class="footer-link"
+                   data-bs-toggle="tooltip" data-bs-title="Descubre quiénes somos y dónde encontrarnos">
+                    <i class="fa-solid fa-circle-info"></i> Quiénes somos
+                </a>
+            </p>
+            <p class="mb-0 small opacity-75">&copy; 2026 Food Truck — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>

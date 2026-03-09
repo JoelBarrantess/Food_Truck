@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes somos — Food Truck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" data-bs-toggle="tooltip" data-bs-title="Volver a la página principal">
+                <i class="fa-solid fa-truck-fast"></i> Food Truck
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú" title="Abrir o cerrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" title="Ver platos fríos" tabindex="0">
+                            <i class="fa-solid fa-snowflake"></i> Fríos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fred1.html" data-bs-toggle="tooltip" data-bs-title="Bocadillo con jamón ibérico de bellota"><i class="fa-solid fa-bread-slice"></i> Bocadillo de ibérico</a></li>
+                            <li><a class="dropdown-item" href="fred2.html" data-bs-toggle="tooltip" data-bs-title="Bocadillo con quesos curados selectos"><i class="fa-solid fa-cheese"></i> Bocadillo de queso</a></li>
+                            <li><a class="dropdown-item" href="fred3.html" data-bs-toggle="tooltip" data-bs-title="Ensalada fresca con productos mediterráneos"><i class="fa-solid fa-leaf"></i> Ensalada mediterránea</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" title="Ver platos calientes" tabindex="0">
+                            <i class="fa-solid fa-fire"></i> Calientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="calent1.html" data-bs-toggle="tooltip" data-bs-title="Hamburguesa de ternera premium"><i class="fa-solid fa-burger"></i> Burger clásica</a></li>
+                            <li><a class="dropdown-item" href="calent2.html" data-bs-toggle="tooltip" data-bs-title="Frankfurt con salchicha artesana"><i class="fa-solid fa-hotdog"></i> Frankfurt gourmet</a></li>
+                            <li><a class="dropdown-item" href="calent3.html" data-bs-toggle="tooltip" data-bs-title="Pizza de horno de leña portátil"><i class="fa-solid fa-pizza-slice"></i> Pizza artesana</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" title="Ver nuestros postres dulces" tabindex="0">
+                            <i class="fa-solid fa-ice-cream"></i> Dulces
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dolc1.html" data-bs-toggle="tooltip" data-bs-title="Helado cubierto de chocolate belga"><i class="fa-solid fa-ice-cream"></i> Helado Magnum</a></li>
+                            <li><a class="dropdown-item" href="dolc2.html" data-bs-toggle="tooltip" data-bs-title="Crêpe artesanal con chocolate fundido"><i class="fa-solid fa-stroopwafel"></i> Crêpe de chocolate</a></li>
+                            <li><a class="dropdown-item" href="dolc3.html" data-bs-toggle="tooltip" data-bs-title="Tarta casera de queso con frutos"><i class="fa-solid fa-cake-candles"></i> Tarta de queso</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" title="Ver bebidas disponibles" tabindex="0">
+                            <i class="fa-solid fa-mug-hot"></i> Bebidas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="beguda1.html" data-bs-toggle="tooltip" data-bs-title="Refresco Coca-Cola servido con hielo"><i class="fa-solid fa-glass-water"></i> Coca-Cola</a></li>
+                            <li><a class="dropdown-item" href="beguda2.html" data-bs-toggle="tooltip" data-bs-title="Cerveza IPA artesana local"><i class="fa-solid fa-beer-mug-empty"></i> Cerveza artesana</a></li>
+                            <li><a class="dropdown-item" href="beguda3.html" data-bs-toggle="tooltip" data-bs-title="Zumo de naranja exprimido al momento"><i class="fa-solid fa-lemon"></i> Zumo de naranja</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quisom.html" data-bs-toggle="tooltip" data-bs-title="Ya estás en esta página">
+                            <i class="fa-solid fa-users"></i> Quiénes somos
+                        </a>
+                    </li>
+                </ul>
+                <span class="navbar-text me-3" id="welcomeText"></span>
+                <button class="btn btn-sm me-2" id="loginBtn" data-bs-toggle="tooltip" data-bs-title="Iniciar sesión de usuario">
+                    <i class="fa-solid fa-right-to-bracket"></i> Login
+                </button>
+                <button class="btn btn-sm d-none" id="logoutBtn" data-bs-toggle="tooltip" data-bs-title="Cerrar la sesión actual">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel"><i class="fa-solid fa-user-lock"></i> Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar" data-bs-toggle="tooltip" data-bs-title="Cerrar el formulario"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label"><i class="fa-solid fa-user"></i> Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username" placeholder="Introduce tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label"><i class="fa-solid fa-lock"></i> Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Introduce la contraseña" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Enviar las credenciales">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-title="Cerrar sin iniciar sesión">
+                                <i class="fa-solid fa-xmark"></i> Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quiénes somos</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Sección héroe -->
+        <section class="container my-5">
+            <div class="text-center mb-5">
+                <h1><i class="fa-solid fa-truck-fast"></i> Quiénes somos</h1>
+                <p class="lead text-muted">Conoce la historia, los valores y el equipo detrás de Food Truck</p>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="Nuestro food truck">
+                </div>
+                <div class="col-lg-6">
+                    <h3><i class="fa-solid fa-book-open"></i> Nuestra historia</h3>
+                    <p>Food Truck nació en 2020 de la pasión de un grupo de amigos por la gastronomía callejera de calidad. Cansados de la comida rápida industrial, decidimos crear una alternativa: platos elaborados con ingredientes frescos, locales y de temporada, servidos desde nuestro furgón itinerante.</p>
+                    <p>Desde entonces, hemos recorrido ferias, mercados y eventos por toda España, siempre con el mismo compromiso: ofrecer una experiencia gastronómica memorable a un precio justo. Cada plato se prepara al momento, con recetas propias que fusionan tradición mediterránea e innovación culinaria.</p>
+                    <p>Hoy, Food Truck es mucho más que un negocio: es una comunidad de amantes de la buena comida que crece día a día.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section class="container mb-5">
+            <h3 class="text-center mb-4"><i class="fa-solid fa-address-book"></i> Contacto y localización</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-location-dot fa-2x mb-3 icon-primary"></i>
+                        <h5>Ubicación</h5>
+                        <p class="mb-0">Ronda Litoral, s/n<br>08001 Barcelona</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-phone fa-2x mb-3 icon-primary"></i>
+                        <h5>Teléfono</h5>
+                        <p class="mb-0"><a href="tel:+34600123456" data-bs-toggle="tooltip" data-bs-title="Llámanos directamente">600 123 456</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-envelope fa-2x mb-3 icon-primary"></i>
+                        <h5>Correo electrónico</h5>
+                        <p class="mb-0"><a href="mailto:info@foodtruck.cat" data-bs-toggle="tooltip" data-bs-title="Envíanos un email">info@foodtruck.cat</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-clock fa-2x mb-3 icon-primary"></i>
+                        <h5>Horario</h5>
+                        <p class="mb-0">Mar - Dom<br>11:00 – 22:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de valores -->
+        <section class="container mb-5">
+            <h3 class="text-center mb-4"><i class="fa-solid fa-heart"></i> Nuestros valores</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-seedling fa-2x mb-3 icon-secondary"></i>
+                        <h5>Producto fresco</h5>
+                        <p class="mb-0">Todos los ingredientes son frescos, de proximidad y de temporada. Apoyamos a los productores locales.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-handshake fa-2x mb-3 icon-secondary"></i>
+                        <h5>Trato cercano</h5>
+                        <p class="mb-0">Nos encanta conocer a nuestros clientes. Cada persona que se acerca a nuestro camión es especial.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-recycle fa-2x mb-3 icon-secondary"></i>
+                        <h5>Sostenibilidad</h5>
+                        <p class="mb-0">Envases compostables, reducción de residuos y energía limpia. Cuidamos del planeta con cada servicio.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100 text-center p-4">
+                        <i class="fa-solid fa-award fa-2x mb-3 icon-secondary"></i>
+                        <h5>Calidad</h5>
+                        <p class="mb-0">Cada receta ha sido perfeccionada para garantizar el mejor sabor y la máxima satisfacción.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de eventos -->
+        <section class="container mb-5">
+            <div class="card product-card p-4 text-center">
+                <h3><i class="fa-solid fa-calendar-days"></i> Eventos y reservas</h3>
+                <p class="lead mb-3">¿Quieres que Food Truck esté presente en tu evento? Bodas, fiestas de empresa, festivales, mercados… ¡Nos adaptamos a todo!</p>
+                <p>Contáctanos por teléfono o correo electrónico para solicitar un presupuesto personalizado sin compromiso.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="tel:+34600123456" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Llámanos para consultar disponibilidad">
+                        <i class="fa-solid fa-phone"></i> Llamar
+                    </a>
+                    <a href="mailto:info@foodtruck.cat" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-title="Envía tu consulta por email">
+                        <i class="fa-solid fa-envelope"></i> Enviar email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="alert cookie-alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="container">
+            <i class="fa-solid fa-cookie-bite me-2"></i>
+            <strong>Aviso legal de cookies:</strong>
+            Este sitio web utiliza cookies propias y de terceros para mejorar tu experiencia de navegación
+            y ofrecer contenidos personalizados. Al continuar navegando, aceptas su uso.
+            <a href="#" class="alert-link" data-bs-toggle="tooltip" data-bs-title="Leer la política de cookies completa">Más información</a>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar" data-bs-toggle="tooltip" data-bs-title="Cerrar el aviso de cookies"></button>
+        </div>
+    </div>
+    <footer class="site-footer text-center">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#" title="Instagram" class="me-3" data-bs-toggle="tooltip" data-bs-title="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Facebook" class="me-3" data-bs-toggle="tooltip" data-bs-title="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="Twitter" class="me-3" data-bs-toggle="tooltip" data-bs-title="Síguenos en Twitter / X"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="TikTok" class="me-3" data-bs-toggle="tooltip" data-bs-title="Síguenos en TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" title="YouTube" data-bs-toggle="tooltip" data-bs-title="Suscríbete a nuestro canal de YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-1">
+                <a href="quisom.html" class="footer-link" data-bs-toggle="tooltip" data-bs-title="Ya estás en esta página">
+                    <i class="fa-solid fa-circle-info"></i> Quiénes somos
+                </a>
+            </p>
+            <p class="mb-0 small opacity-75">&copy; 2026 Food Truck — Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
